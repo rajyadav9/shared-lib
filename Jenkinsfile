@@ -6,10 +6,12 @@ pipeline {
     }
 stages{
 	stage ("Shared Library Test") {
-  	log {
+  	script{
+		log {
     		type = "warning"
    	         message = "This is a log message!"
             }
-      }
+      }}
+
 }
 }
