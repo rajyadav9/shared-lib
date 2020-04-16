@@ -1,9 +1,9 @@
+@Library('my-shared-library') _
 pipeline {
     agent any
     options {
         skipStagesAfterUnstable()
     }
-@Library('my-shared-library') _
 stages{
 	stage ("Shared Library Test") {
   	log {
