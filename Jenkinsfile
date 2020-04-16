@@ -8,8 +8,6 @@ pipeline {
                 script { 
                      type= "warning"
 		     message = "This is a log msg"
-                     log.info 'Starting'
-                    log.warning 'Nothing to do!'
                 }
             }
         }
