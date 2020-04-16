@@ -9,6 +9,8 @@ pipeline {
                      type= "warning"
 		     message = "This is a log msg"
 			echo "abcxeyjkdbj"
+			log.info 'Starting'
+                      log.warning 'Nothing to do!'
                 }
             }
         }
