@@ -8,6 +8,7 @@ pipeline {
                 script { 
                      type= "warning"
 		     message = "This is a log msg"
+			echo "abcxeyjkdbj"
                 }
             }
         }
