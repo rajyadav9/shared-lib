@@ -1,30 +1,37 @@
-//@Library('my-shared-library') _
+@Library('my-shared-library') _
 pipeline {
     agent any
 
     stages {
-    stage ('Example-jbdjbv') {
+    stage('Set environment variables')
+            {
                 steps {
-                    // log.info 'Starting'
-                    sh """
-                    echo "kjcsccldncldklcndklcndlkcnlkcn"
-                    cd /Users/raj.yadav/.jenkins/workspace/shared-lib-demo@libs/my-shared-library
-                    cp -r jenkins/vars .
-                   """
+                    script{
+                        env.REGION = "us-west-2"
+                        env.PROJECT_NAME = 'admin-core-web'
+                        env.SERVICE_PATH = ""
+                        env.ECS_SERVICE_NAME = "hrx-admin-core-web-service"
+                        env.SSM_PARAM_PREFIX = "hrx-core-web"
                     }
                 }
+            }
 
-        @Library('my-shared-library') _
         stage ('Example') {
             steps {
                 // log.info 'Starting' 
                 script {
 
-             type= "warning"
-             message = "This is a log msg"
-             echo "abcxeyjkdbj"
-             log.info 'Starting'
-             log.warning 'Nothing to do!'
+//              type= "warning"
+//              message = "This is a log msg"
+//              echo "abcxeyjkdbj"
+//              log.info 'Starting'
+//              log.warning 'Nothing to do!'
+
+                 abc(
+                 REGION: "${REGION}"
+                 PROJECT_NAME:"${PROJECT_NAME}"
+                 )
+
                 }
             }
     }
