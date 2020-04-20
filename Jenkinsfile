@@ -28,8 +28,9 @@ pipeline {
 //              log.warning 'Nothing to do!'
 
                  abc(
-                 REGION: "${REGION}"
-                 PROJECT_NAME:"${PROJECT_NAME}"
+                 REGION: "${REGION}",
+                 PROJECT_NAME: "${PROJECT_NAME}",
+
                  )
 
                 }
