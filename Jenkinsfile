@@ -3,10 +3,11 @@ pipeline {
     agent any
 
     stages {
-    stage ('Example') {
+    stage ('Example-jbdjbv') {
                 steps {
                     // log.info 'Starting'
                     sh """
+                    echo "kjcsccldncldklcndklcndlkcnlkcn"
                     cd /Users/raj.yadav/.jenkins/workspace/shared-lib-demo@libs/my-shared-library
                     cp -r jenkins/vars .
                    """
