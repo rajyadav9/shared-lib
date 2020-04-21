@@ -12,6 +12,7 @@ pipeline {
                         env.SERVICE_PATH = ""
                         env.ECS_SERVICE_NAME = "hrx-admin-core-web-service"
                         env.SSM_PARAM_PREFIX = "hrx-core-web"
+                        env.aaa = "my name is raj"
                     }
                 }
             }
@@ -26,14 +27,18 @@ pipeline {
 
             }
     }
-    stage('Set variables')
-                {
-                    steps {
-                         zzz(
-                                aws:aws
-                            )
-
-                    }
-                }
+//     stage('Set variables')
+//                 {
+//                     steps {
+//                             aws1 = abc(
+//                                                    REGION: "${REGION}",
+//                                                    PROJECT_NAME: "${PROJECT_NAME}",
+//                                                    ).aws
+// //                          zzz(
+// //                                 aws: "${aws1}"
+// //                             )
+//
+//                     }
+               // }
 }
 }
