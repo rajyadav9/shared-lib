@@ -32,7 +32,7 @@ pipeline {
                  PROJECT_NAME: "${PROJECT_NAME}",
 
                  )
-
+                    zzz()
                 }
             }
     }
