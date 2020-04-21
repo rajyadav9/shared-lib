@@ -19,29 +19,19 @@ pipeline {
         stage ('Example') {
             steps {
                 // log.info 'Starting' 
-                script {
-
-//              type= "warning"
-//              message = "This is a log msg"
-//              echo "abcxeyjkdbj"
-//              log.info 'Starting'
-//              log.warning 'Nothing to do!'
-
                  abc(
                  REGION: "${REGION}",
                  PROJECT_NAME: "${PROJECT_NAME}",
-
                  )
 
-                }
             }
     }
     stage('Set variables')
                 {
                     steps {
                          zzz(
-                                aws:
-                               )
+                                aws:aws
+                            )
 
                     }
                 }
