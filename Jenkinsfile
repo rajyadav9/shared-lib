@@ -32,9 +32,18 @@ pipeline {
                  PROJECT_NAME: "${PROJECT_NAME}",
 
                  )
-                    zzz()
+
                 }
             }
     }
+    stage('Set variables')
+                {
+                    steps {
+                         zzz(
+                                aws:
+                               )
+
+                    }
+                }
 }
 }
