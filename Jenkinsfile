@@ -32,6 +32,8 @@ stage ('env') {
                  REGION: "${REGION}",
                  PROJECT_NAME: "${PROJECT_NAME}",
                  )
+                echo "${env.XYZ}"
+
             }
     }
 //     stage('Set variables')
