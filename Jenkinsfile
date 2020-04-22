@@ -18,7 +18,13 @@ pipeline {
                     }
                 }
             }
-
+stage ('env') {
+            steps {
+            script{
+            env.XYZ= "ABCABCABC"
+            }
+    }
+    }
         stage ('Example') {
             steps {
                 // log.info 'Starting' 
@@ -26,7 +32,6 @@ pipeline {
                  REGION: "${REGION}",
                  PROJECT_NAME: "${PROJECT_NAME}",
                  )
-            env.XYZ= "ABCABCABC"
             }
     }
 //     stage('Set variables')
