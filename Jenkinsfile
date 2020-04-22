@@ -32,6 +32,7 @@ stage ('env') {
                  REGION: "${REGION}",
                  PROJECT_NAME: "${PROJECT_NAME}",
                  )
+                 echo "jai shree ram"
                 echo "${env.XYZ}"
 
             }
