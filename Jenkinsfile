@@ -13,6 +13,8 @@ pipeline {
                         env.ECS_SERVICE_NAME = "hrx-admin-core-web-service"
                         env.SSM_PARAM_PREFIX = "hrx-core-web"
                         env.aaa = "my name is raj"
+                        echo "racnckcknckncksnc"
+                        echo "${env.XYZ}"
                     }
                 }
             }
@@ -24,7 +26,7 @@ pipeline {
                  REGION: "${REGION}",
                  PROJECT_NAME: "${PROJECT_NAME}",
                  )
-
+            env.XYZ= "ABCABCABC"
             }
     }
 //     stage('Set variables')
