@@ -40,23 +40,8 @@ pipeline {
           println("Build is not running or is current build, not aborting - #${build.number}")
         }
       }
-
+}
  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -78,7 +63,7 @@ pipeline {
 //                         env.SSM_PARAM_PREFIX = "hrx-core-web"
 //                         env.aaa = "my name is raj"
 //                         echo "racnckcknckncksnc"
-
+//
 //                         env.build_disp=currentBuild.rawBuild.getPreviousBuildInProgress()
 //                         echo "buildaaaaaa"
 //                         echo "${env.build_disp}"
