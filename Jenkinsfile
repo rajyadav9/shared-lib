@@ -82,9 +82,9 @@ pipeline {
 //                         env.build_disp=currentBuild.rawBuild.getPreviousBuildInProgress()
 //                         echo "buildaaaaaa"
 //                         echo "${env.build_disp}"
-                    }
-                }
-            }
+//                     }
+//                 }
+//             }
 // stage ('env') {
 //             steps {
 //             script{
