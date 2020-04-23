@@ -19,11 +19,10 @@ pipeline {
                         env.SSM_PARAM_PREFIX = "hrx-core-web"
                         env.aaa = "my name is raj"
                         echo "racnckcknckncksnc"
-                        echo "${env.XYZ}"
 
                         env.build_disp=currentBuild.rawBuild.getPreviousBuildInProgress()
                         echo "buildaaaaaa"
-                        echo "${build_disp}"
+                        echo "${env.build_disp}"
                     }
                 }
             }
