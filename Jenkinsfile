@@ -20,7 +20,7 @@ pipeline {
 
          }
 
-
+}
     def abortPreviousRunningBuilds() {
       def hi = Hudson.instance
       def pname = env.JOB_NAME.split('/')[0]
@@ -40,5 +40,4 @@ pipeline {
           println("Build is not running or is current build, not aborting - #${build.number}")
         }
       }
-}
 }
