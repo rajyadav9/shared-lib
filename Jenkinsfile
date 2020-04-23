@@ -7,13 +7,19 @@ pipeline {
     agent any
 
     stages {
-    stage('Set environment variables')
+           stage('Set environment variables')
             {
                 steps {
-                    script{
+//                     script{
 //                     def buildNumber = env.BUILD_NUMBER as int
 //                     if (buildNumber > 1) milestone(buildNumber - 1)
 //                     milestone(buildNumber)
+                    abortPreviousRunningBuilds()
+                     }
+              }
+
+         }
+
 
     def abortPreviousRunningBuilds() {
       def hi = Hudson.instance
@@ -34,10 +40,37 @@ pipeline {
           println("Build is not running or is current build, not aborting - #${build.number}")
         }
       }
-    }
-    }
-    }
-    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //                         env.REGION = "us-west-2"
 //                         env.PROJECT_NAME = 'admin-core-web'
 //                         env.SERVICE_PATH = ""
