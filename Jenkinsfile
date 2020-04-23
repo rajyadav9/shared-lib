@@ -1,3 +1,6 @@
+import hudson.model.Result
+import hudson.model.Run
+import jenkins.model.CauseOfInterruption.UserInterruption
 @Library('my-shared-library') _
 pipeline {
     agent any
@@ -17,7 +20,7 @@ pipeline {
                         echo "racnckcknckncksnc"
                         echo "${env.XYZ}"
 
-                        env.build_disp=previousBuild
+                        env.build_disp=currentBuild.rawBuild.getPreviousBuildInProgress()
                         echo "buildaaaaaa"
                         echo "${build_disp}"
                     }
