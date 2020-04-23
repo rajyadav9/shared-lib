@@ -10,10 +10,7 @@ pipeline {
            stage('Set environment variables')
             {
                 steps {
-//                     script{
-//                     def buildNumber = env.BUILD_NUMBER as int
-//                     if (buildNumber > 1) milestone(buildNumber - 1)
-//                     milestone(buildNumber)
+
                        abortPreviousRunningBuilds()
                      }
               }
