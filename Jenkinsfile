@@ -7,6 +7,7 @@ pipeline {
             {
                 steps {
                     script{
+                    zzz()
                         env.REGION = "us-west-2"
                         env.PROJECT_NAME = 'admin-core-web'
                         env.SERVICE_PATH = ""
