@@ -16,6 +16,10 @@ pipeline {
                         env.aaa = "my name is raj"
                         echo "racnckcknckncksnc"
                         echo "${env.XYZ}"
+
+                        env.build_disp=previousBuild
+                        echo "buildaaaaaa"
+                        echo "${build_disp}"
                     }
                 }
             }
@@ -23,6 +27,8 @@ stage ('env') {
             steps {
             script{
             env.XYZ= "ABCABCABC"
+                                zzz()
+
             }
     }
     }
