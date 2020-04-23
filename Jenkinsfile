@@ -11,7 +11,11 @@ pipeline {
             {
                 steps {
                     script{
-                    zzz()
+                    def buildNumber = env.BUILD_NUMBER as int
+                    if (buildNumber > 1) milestone(buildNumber - 1)
+                    milestone(buildNumber)
+
+
                         env.REGION = "us-west-2"
                         env.PROJECT_NAME = 'admin-core-web'
                         env.SERVICE_PATH = ""
