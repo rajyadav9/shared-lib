@@ -1,8 +1,8 @@
-import hudson.model.Result
-import hudson.model.Run
-import jenkins.model.CauseOfInterruption.UserInterruption
-import com.cloudbees.groovy.cps.NonCPS
-@Library('my-shared-library') _
+// import hudson.model.Result
+// import hudson.model.Run
+// import jenkins.model.CauseOfInterruption.UserInterruption
+// import com.cloudbees.groovy.cps.NonCPS
+// @Library('my-shared-library') _
 pipeline {
     agent any
 
@@ -14,7 +14,7 @@ pipeline {
 //                     def buildNumber = env.BUILD_NUMBER as int
 //                     if (buildNumber > 1) milestone(buildNumber - 1)
 //                     milestone(buildNumber)
-                    abortPreviousRunningBuilds()
+                       abortPreviousRunningBuilds()
                      }
               }
 
