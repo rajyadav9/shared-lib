@@ -1,6 +1,8 @@
 import hudson.model.Result
 import hudson.model.Run
 import jenkins.model.CauseOfInterruption.UserInterruption
+package net.my.jenkins.workflow
+import com.cloudbees.groovy.cps.NonCPS
 @Library('my-shared-library') _
 pipeline {
     agent any
