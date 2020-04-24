@@ -18,7 +18,7 @@ pipeline {
                             echo "${env.cls}"
                             echo "${tag}"
 
-    env.aa =currentBuild.getPreviousBuildInProgress().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters.contains("${tag}")
+    env.aa =currentBuild.getPreviousBuildInProgress().actions.find{ it instanceof ParametersAction }?.parameters.contains("${tag}")
                             echo "${env.aa}"
                             echo "jai shrree ram"
 //                             echo "${env.aa[10]}"
