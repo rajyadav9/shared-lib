@@ -22,7 +22,7 @@ pipeline {
 
                             echo "hahahah"
                             env.BUILD_CAUSE = currentBuild.getBuildCauses()[0].shortDescription.contains("push by") ? 'push' : 'manual'
-                            env.BUILD_CAUSE11 = currentBuild.getBuildCauses()[0].shortDescription.contains("push by") ? 'push' : 'manual'
+                            env.BUILD_CAUSE11 = currentBuild.getBuildCauses()
                             echo "${env.BUILD_CAUSE}"
                             echo"nananana"
                             echo "${env.BUILD_CAUSE11}"
