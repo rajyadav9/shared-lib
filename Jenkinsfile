@@ -31,7 +31,6 @@ pipeline {
                             echo "${env.BUILD_CAUSE}"
                             echo"nananana"
                             echo "${env.BUILD_CAUSE11}"
-                            delay(10000)
 
 //}
 
