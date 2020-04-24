@@ -2,7 +2,7 @@
 // import hudson.model.Run
 // import jenkins.model.CauseOfInterruption.UserInterruption
 // import com.cloudbees.groovy.cps.NonCPS
-// @Library('my-shared-library') _
+@Library('my-shared-library') _
 pipeline {
     agent any
 
