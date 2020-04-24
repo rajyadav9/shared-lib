@@ -18,8 +18,17 @@ pipeline {
 //                         stage 'purge'
 //                         pipeline.killOldBuilds()
 
-                          killOldBuilds(String userAborting)
+def jobName = env.JOB_NAME
+ def currentBuildNumber = env.BUILD_NUMBER.toInteger()
+ def currentJob = Jenkins.instance.getItemByFullName(jobName)
 
+ // Loop through all instances of this particular job/branch
+ for (def build : currentJob.builds) {
+ if (build.isBuilding() && (build.number.toInteger() < currentBuildNumber)) {
+ echo "Older build still queued. Sending kill signal to build number: ${build.number}"
+ build.doStop()
+ }
+ }
                         //iterate through current project runs
 //                           build.getProject()._getRuns().each{ run ->
 //                           def exec = run.getExecutor()
