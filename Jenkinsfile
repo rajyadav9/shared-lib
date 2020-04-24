@@ -13,6 +13,7 @@ pipeline {
                         steps {
 //                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID) - 1
 //                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID)
+                            abort(tag:"${tag}")
                             script{
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
