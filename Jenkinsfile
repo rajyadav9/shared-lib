@@ -16,6 +16,8 @@ pipeline {
                             script{
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
+                            env.bb = currentBuild.getPreviousBuildInProgress()
+                            echo "${env.bb}"
                             echo "current tag"
                             echo "${tag}"
          // if(currentBuild.getPreviousBuildInProgress()){
