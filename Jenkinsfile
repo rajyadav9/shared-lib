@@ -20,7 +20,7 @@ pipeline {
                             env.cc = currentBuild.getPreviousBuild()
                             echo "${env.bb}"
                             echo "full build"
-                                                        echo "${env.bb}"
+                                                        echo "${env.cc}"
 
                             echo "current tag"
                             echo "${tag}"
