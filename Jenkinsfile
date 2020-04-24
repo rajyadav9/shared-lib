@@ -17,8 +17,8 @@ pipeline {
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
                             echo "${tag}"
-          if(currentBuild.getPreviousBuildInProgress()){
-          env.aa =currentBuild.getPreviousBuildInProgress().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters.contains("${tag}")
+         // if(currentBuild.getPreviousBuildInProgress()){
+          env.aa =currentBuild.getPreviousBuild().actions.find{ it instanceof ParametersAction }?.parameters.contains("${tag}")
                             echo "${env.aa}"
                             echo "jai shrree ram"
 //                             echo "${env.aa[10]}"
@@ -32,7 +32,7 @@ pipeline {
                             echo "${env.BUILD_CAUSE11}"
                             delay(10000)
 
-}
+//}
 
                             }
                         }
