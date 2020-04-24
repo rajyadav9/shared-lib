@@ -11,8 +11,8 @@ pipeline {
     stages {
             stage('Stop Old Build') {
                         steps {
-                            milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID) - 1
-                            milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID)
+//                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID) - 1
+//                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID)
                             script{
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
