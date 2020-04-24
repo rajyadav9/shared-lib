@@ -16,14 +16,15 @@ pipeline {
                             script{
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
+                            echo "current tag"
                             echo "${tag}"
          // if(currentBuild.getPreviousBuildInProgress()){
  env.aa = currentBuild.getPreviousBuild().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters.find{it.name == 'tag'}?.value
-
+                            echo "previous tag"
                             echo "${env.aa}"
                             echo "jai shrree ram"
-//                             echo "${env.aa[10]}"
-                            echo "${tag}"
+//                             echo "${env.aa[10]}
+
 
                             echo "hahahah"
                             env.BUILD_CAUSE = currentBuild.getBuildCauses()[0].shortDescription.contains("push by") ? 'push' : 'manual'
