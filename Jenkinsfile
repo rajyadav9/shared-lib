@@ -19,7 +19,7 @@ pipeline {
                             env.aa =currentBuild.getPreviousBuild().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters.contains("${tag}")
                             echo "${env.aa}"
                             echo "jai shrree ram"
-                            echo "${env.aa[10]}"
+//                             echo "${env.aa[10]}"
                             echo "${tag}"
 
                             echo "hahahah"
