@@ -18,7 +18,7 @@ pipeline {
 //                         stage 'purge'
 //                         pipeline.killOldBuilds()
 
-                          killOldBuilds(userAborting)
+                          killOldBuilds(String userAborting)
 
                         //iterate through current project runs
 //                           build.getProject()._getRuns().each{ run ->
