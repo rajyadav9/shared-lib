@@ -13,6 +13,9 @@ pipeline {
                         steps {
                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID) - 1
                             milestone label: '', ordinal:  Integer.parseInt(env.BUILD_ID)
+
+                            def cls = currentBuild.getPreviousBuild().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters
+                            echo "${cls}"
                         }
                     }
             }
