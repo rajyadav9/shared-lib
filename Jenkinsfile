@@ -14,7 +14,7 @@ pipeline {
                 steps {
                         script{
                         //iterate through current project runs
-                        build.getProject()._getRuns().iterator().each{ run ->
+                          build.getProject()._getRuns().each{ run ->
                           def exec = run.getExecutor()
                           //if the run is not a current build and it has executor (running) then stop it
                           if( run!=build && exec!=null ){
