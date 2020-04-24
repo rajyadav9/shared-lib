@@ -16,6 +16,10 @@ pipeline {
                             script{
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
+                            env.aa =currentBuild.getPreviousBuild().getRawBuild().actions.find{ it instanceof ParametersAction }?.parameters
+                            echo "${env.aa}"
+
+
                             }
                         }
                     }
