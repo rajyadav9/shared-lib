@@ -16,7 +16,7 @@ pipeline {
                             abort(tag:"${tag}")
 
                             script{
-                                  sleep(100)
+                                  sleep(50)
 
                             env.cls = currentBuild.getBuildCauses()
                             echo "${env.cls}"
